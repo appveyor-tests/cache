@@ -1,0 +1,11 @@
+install:
+- nuget restore packages.config -PackagesDirectory packages
+
+cache:
+- packages
+- c:\go17
+
+build: off
+
+test_script:
+- ps: Set-Content -Path "$env:appveyor_build_folder\packages\ts.txt" -Value "$(get-date)"
