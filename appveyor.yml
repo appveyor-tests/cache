@@ -7,7 +7,7 @@ install:
 cache:
 - packages
 - c:\go17
-- c:\msys64
+- c:\msys64 -> appveyor.yml
 
 build: off
 
