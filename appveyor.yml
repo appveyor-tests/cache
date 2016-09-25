@@ -3,7 +3,7 @@ environment:
 
 install:
 - nuget restore packages.config -PackagesDirectory packages
-- .\cache-hidden.ps1
+- ps: .\cache-hidden.ps1
 
 cache:
 - packages -> packages.config
