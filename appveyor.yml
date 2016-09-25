@@ -4,6 +4,7 @@ environment:
 install:
 - nuget restore packages.config -PackagesDirectory packages
 
+
 cache:
 - packages
 - c:\go17
