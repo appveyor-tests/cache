@@ -7,7 +7,7 @@ install:
 
 cache:
 - packages
-- c:\go17 -> appveyor.yml
+- c:\go17 -> README.md
 #- c:\msys64 -> appveyor.yml
 #- c:\qt\5.6 -> appveyor.yml
 
