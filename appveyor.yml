@@ -3,11 +3,12 @@ environment:
 
 install:
 - nuget restore packages.config -PackagesDirectory packages
-
+- .\cache-hidden.ps1
 
 cache:
 - packages -> packages.config
 - c:\go17 -> README.md
+- c:\test-folder
 #- c:\msys64 -> appveyor.yml
 #- c:\qt\5.6 -> appveyor.yml
 
