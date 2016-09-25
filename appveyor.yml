@@ -14,3 +14,6 @@ build: off
 
 test_script:
 - ps: Set-Content -Path "$env:appveyor_build_folder\packages\ts.txt" -Value "$(get-date)"
+
+on_finish:
+- ps: Start-sleep -s 1800
