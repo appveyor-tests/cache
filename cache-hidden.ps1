@@ -8,7 +8,10 @@ if(-not (Test-Path 'C:\test-folder')) {
   (Get-Item 'C:\test-folder\hidden-folder').Attributes = 'Hidden'
   (Get-Item 'C:\test-folder\hidden-folder\secret.txt').Attributes = 'Hidden'
 } else {
+  Write-Host "Verifying restored folder"
   Get-ChildItem 'C:\test-folder' -Recurse -Force
-  (Get-Item 'C:\test-folder\hidden-folder' -Force).Attributes
-  (Get-Item 'C:\test-folder\hidden-folder\secret.txt' -Force).Attributes
+  $dir_attrs = (Get-Item 'C:\test-folder\hidden-folder' -Force).Attributes
+  $file_attrs = (Get-Item 'C:\test-folder\hidden-folder\secret.txt' -Force).Attributes
+  if($dir_attrs -ne 'Hidden, Directory') { throw "Restored dir is not hidden." }
+  if($file_attrs -ne 'Hidden') { throw "Restored files is not hidden." }
 }
