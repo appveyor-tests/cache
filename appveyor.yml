@@ -7,9 +7,9 @@ install:
 
 cache:
 - packages
-- c:\go17
+- c:\go17 -> appveyor.yml
 #- c:\msys64 -> appveyor.yml
-- c:\qt\5.6 -> appveyor.yml
+#- c:\qt\5.6 -> appveyor.yml
 
 build: off
 
