@@ -6,7 +6,7 @@ install:
 - ps: .\cache-hidden.ps1
 
 cache:
-- packages -> packages.config
+- packages
 - c:\go17 -> README.md
 - c:\test-folder
 #- c:\msys64 -> appveyor.yml
