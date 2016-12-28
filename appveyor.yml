@@ -16,6 +16,12 @@ build: off
 
 test_script:
 - ps: Set-Content -Path "$env:appveyor_build_folder\packages\ts.txt" -Value "$(get-date)"
+- ps: |
+    $expected_7zip_path = '"C:\Program Files\7-Zip\7z.exe"'
+    Write-Host "Path to 7z: $env:7zip"
+    if($env:7zip -ne $expected_7zip_path) { throw "7zip: $env:7zip, expected: $expected_7zip_path"; }
+    Write-Host "Clear PATH variable - cache should work"
+    $env:path = ""
 
 #on_finish:
 #- ps: Start-sleep -s 1800
