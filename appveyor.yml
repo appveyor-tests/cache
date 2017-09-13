@@ -14,7 +14,7 @@ cache:
 #- c:\go17 -> README.md
 - c:\test-folder\
 - c:\msys64 -> appveyor.yml
-- c:\msys64-copy -> appveyor.yml
+#- c:\msys64-copy -> appveyor.yml
 #- c:\qt\5.6 -> README.md
 
 build: off
