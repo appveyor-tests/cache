@@ -1,6 +1,6 @@
 environment:
   APPVEYOR_CACHE_ENTRY_COMPRESSION_LEVEL: Fastest
-  APPVEYOR_CACHE_ENTRY_ZIP_ARGS: -tzip -mx=0
+#  APPVEYOR_CACHE_ENTRY_ZIP_ARGS: -tzip -mx=0
 
 init:
 - mklink /J C:\msys64-copy C:\msys64
