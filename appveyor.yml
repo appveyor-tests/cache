@@ -1,5 +1,6 @@
 environment:
   APPVEYOR_CACHE_ENTRY_COMPRESSION_LEVEL: Fastest
+  APPVEYOR_CACHE_ENTRY_ZIP_ARGS: -tzip -mx=1
 
 install:
 - nuget restore packages.config -PackagesDirectory packages
