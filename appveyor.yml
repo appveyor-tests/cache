@@ -3,7 +3,6 @@ environment:
 #  APPVEYOR_CACHE_ENTRY_ZIP_ARGS: -tzip -mx=0
 
 init:
-- appveyor version
 - mklink /J C:\msys64-copy C:\msys64
 - ping -n 1 objects.liquidweb.services
 
